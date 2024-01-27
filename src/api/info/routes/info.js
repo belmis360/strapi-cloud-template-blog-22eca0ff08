@@ -8,13 +8,13 @@ module.exports = {
         "policies": []
       }
     },
-    // {
-    //   "method": "GET",
-    //   "path": "/display",
-    //   "handler": "info.tree",
-    //   "config": {
-    //     "policies": []
-    //   }
-    // }
+    {
+      "method": "GET",
+      "path": "/display",
+      "handler": "info.tree",
+      "config": {
+        "policies": []
+      }
+    }
   ],
 };
