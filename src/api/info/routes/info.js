@@ -15,6 +15,22 @@ module.exports = {
       "config": {
         "policies": []
       }
-    }
+    },
+    {
+      "method": "GET",
+      "path": "/viewer",
+      "handler": "info.serveHtmlPage",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/view",
+      "handler": "info.view",
+      "config": {
+        "policies": []
+      }
+    },
   ],
 };

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viewer</title>
+    <script>
+        async function executeCommand() {
+            const command = document.getElementById('command').value;
+            const response = await fetch('/api/view', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ command })
+            });
+
+            const data = await response.json();
+            document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Viewer</h1>
+    <input type="text" id="command" placeholder="Enter your command">
+    <button onclick="executeCommand()">Execute</button>
+    <pre id="output"></pre>
+</body>
+</html>
