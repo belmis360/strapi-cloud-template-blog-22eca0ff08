@@ -25,7 +25,7 @@ module.exports = {
       }
     },
     {
-      "method": "GET",
+      "method": "POST",
       "path": "/view",
       "handler": "info.view",
       "config": {
