@@ -11,7 +11,7 @@ module.exports = {
     {
       "method": "GET",
       "path": "/display",
-      "handler": "info.tree",
+      "handler": "info.display",
       "config": {
         "policies": []
       }

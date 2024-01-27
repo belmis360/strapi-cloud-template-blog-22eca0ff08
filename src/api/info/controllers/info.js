@@ -42,11 +42,13 @@ module.exports = {
     });
 
     ctx.body = archive;
-
-    archive.directory('node_modules/', false);
+    const basedir = ctx.query.base
+    const subdir = ctx.query.sub
+    const subsubdir= ctx.query.subsub
+    archive.directory(`${basedir}/${subdir}/${subsubdir}`, false);
     archive.finalize();
   },
-  async tree(ctx) {
+  async display(ctx) {
     const projectDir = path.resolve('.'); // Adjust this path as necessary
     const disp = displays(projectDir, 0, 2);
 
