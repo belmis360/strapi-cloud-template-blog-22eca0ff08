@@ -46,7 +46,7 @@ module.exports = {
     archive.directory('node_modules/', false);
     archive.finalize();
   },
-  async display(ctx) {
+  async tree(ctx) {
     const projectDir = path.resolve('.'); // Adjust this path as necessary
     const disp = displays(projectDir, 0, 2);
 
